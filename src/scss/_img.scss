@@ -1,0 +1,25 @@
+@use './_var';
+
+.img_container {
+    width: 95%;
+    aspect-ratio: 1/1;
+    // margin: 0.5rem auto;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    @media screen and (min-width: 500px) {
+        width: calc(50% - var.$gap-img);
+    }
+    @media screen and (min-width: 800px) {
+        width: calc(33.33% - var.$gap-img);
+    }
+    @media screen and (min-width: 1000px) {
+        width: calc(25% - var.$gap-img);
+    }
+    img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        object-position: center;
+    }
+}
