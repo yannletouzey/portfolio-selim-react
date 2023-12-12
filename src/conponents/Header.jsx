@@ -38,7 +38,6 @@ const Header = () => {
 
     useEffect(() => {
         const widthContact = contactRef.current.getBoundingClientRect().width;
-
         const contact = document.querySelector(".contact");
         const burger = document.querySelector(".burger");
         if (openBurger === "burger burger_is-open") {

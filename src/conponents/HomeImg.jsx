@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const ImgContainer = ({img}) => {
+const HomeImg = ({img}) => {
     const [resize, setResize] = useState(window.innerWidth);
     
     const handleResize = () => {
@@ -21,4 +21,4 @@ const ImgContainer = ({img}) => {
         </div>
     );
 };
-export default ImgContainer;
+export default HomeImg;

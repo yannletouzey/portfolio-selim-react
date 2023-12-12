@@ -1,11 +1,11 @@
-import ImgContainer from './ImgContainer.jsx'
-import data from '../js/data.js'
+import HomeImg from './HomeImg.jsx'
+import homeImg from '../js/HomeImg.js'
 const Main = () => {
     return (
         <main className="main">
-            {data[0].map((item, i) => {
+            {homeImg[0].map((item, i) => {
                 return (
-                    <ImgContainer key={i} img={item.img} />
+                    <HomeImg key={i} img={item.img} />
                 )
             })}
         </main>

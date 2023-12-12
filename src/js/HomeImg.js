@@ -1,4 +1,4 @@
-const img = [
+const homeImg = [
     [
         {
             id: 1,
@@ -47,4 +47,4 @@ const img = [
     ]
 ]
 
-export default img;
+export default homeImg;
