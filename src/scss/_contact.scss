@@ -1,0 +1,30 @@
+@use './_var';
+
+.contact {
+    display: flex;
+    height: 100%;
+    position: absolute;
+    left: 100%;
+    transition-duration: var.$transition-duration;
+    @media screen and (min-width: 500px) {
+        translate: -100% 0;
+    }
+    a {
+        text-decoration: none;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        padding: 0 0.3rem;
+        span {
+            display: none;
+            @media screen and (min-width: 500px) {
+                display: inline-block;
+            }
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+

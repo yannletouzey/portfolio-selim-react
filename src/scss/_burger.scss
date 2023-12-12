@@ -1,0 +1,71 @@
+@use './_var';
+
+.burger {
+    width: var.$burger-width;
+    height: var.$burger-width;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(100% - 2rem);
+    cursor: pointer;
+    @media screen and (min-width: 500px) {
+        display: none;
+    }
+    span {
+        transition-duration: var.$transition-duration;
+        width: var.$burger-width;
+        height: var.$burger-height;
+        background-color: #000;
+        position: absolute;
+        top: 50%;
+        translate: 0 -50%;
+    }
+    &::before {
+        content: '';
+        transition-duration: var.$transition-duration;
+        width: var.$burger-width;
+        height: var.$burger-height;
+        background-color: #000;
+        position: absolute;
+        top: calc(50% - (var.$burger-height * 2));
+        translate: 0 -50%;
+        border-radius: var.$burger-height var.$burger-height 0 0;
+    }
+    &::after {
+        content: '';
+        transition-duration: var.$transition-duration;
+        width: var.$burger-width;
+        height: var.$burger-height;
+        background-color: #000;
+        position: absolute;
+        top: calc(50% + (var.$burger-height * 2));
+        translate: 0 -50%;
+        border-radius: 0 0 var.$burger-height var.$burger-height;
+    }
+    &_is-closed {
+        transition-duration: var.$transition-duration;
+        &:hover.burger_is-closed::before {
+            translate: 0 -3px;
+        }
+        &:hover.burger_is-closed::after {
+            translate: 0 0.5px;
+        }
+    }
+    &_is-open {
+        transition-duration: var.$transition-duration;
+        & > span {
+            scale: 0;
+        }
+        &::before {
+            border-radius: 0;
+            transform-origin: center;
+            rotate: 45deg;
+            top: 50%;
+        }
+        &::after {
+            border-radius: 0;
+            transform-origin: center;
+            rotate: -45deg;
+            top: 50%;
+        }
+    }
+}

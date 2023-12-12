@@ -1,0 +1,29 @@
+@use './_var';
+
+header {
+    position: relative;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: sans-serif;
+}
+.header_title {
+    padding: 0 1rem;
+}
+.header_title span {
+    transition-duration: var.$transition-duration;
+    position: absolute;
+    transform-origin: 0;
+}
+.title_is-closed {
+    scale: 0 1;
+}
+@media screen and (min-width: 500px) {
+    .header_title {
+        padding: 0 2rem;
+    }
+}
+
+
+
