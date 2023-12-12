@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import personalImg from '../js/personalImg.js';
+import punchImg from '../js/punchImg.js';
 
-const HomeImg = () => {
+const PunchImg = () => {
     const [resize, setResize] = useState(window.innerWidth);
     
     const handleResize = () => {
@@ -17,7 +17,7 @@ const HomeImg = () => {
 
     return (
         <>
-            {personalImg[0].map((item, i) => {
+            {punchImg[0].map((item, i) => {
                 return (
                     <div key={i} className="img_container">
                         <img src={item.img} alt="" />
@@ -27,4 +27,4 @@ const HomeImg = () => {
         </>
     );
 };
-export default HomeImg;
+export default PunchImg;

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [resize, setResize] = useState(window.innerWidth);
@@ -51,14 +52,17 @@ const Header = () => {
 
     return (
         <header className="header">
-            <h1 className="header_title">Selim<span className={openTitle}>-DM</span></h1>
+            <h1 className="header_title">
+                <Link to="/" className="header_title__link">Selim<span className={openTitle}>-DM</span></Link>
+            </h1>
             <div className={openBurger} onClick={handleClick}><span></span></div>
             <div className={openContact} ref={contactRef}>
-                <a href="#" target="_blank" rel="noopener noreferrer">Works</a>
+                <Link to="/works" className="header_title__link">Works</Link>
                 <a href="#" target="_blank" rel="noopener noreferrer">Insta<span>gram</span></a>
                 <a href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
             </div>
         </header>
+    
     );
 };
 export default Header;

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import personalImg from '../js/personalImg.js';
+import centroImg from '../js/centroImg.js';
 
-const HomeImg = () => {
+const CentroImg = () => {
     const [resize, setResize] = useState(window.innerWidth);
     
     const handleResize = () => {
@@ -17,7 +17,7 @@ const HomeImg = () => {
 
     return (
         <>
-            {personalImg[0].map((item, i) => {
+            {centroImg[0].map((item, i) => {
                 return (
                     <div key={i} className="img_container">
                         <img src={item.img} alt="" />
@@ -27,4 +27,4 @@ const HomeImg = () => {
         </>
     );
 };
-export default HomeImg;
+export default CentroImg;
