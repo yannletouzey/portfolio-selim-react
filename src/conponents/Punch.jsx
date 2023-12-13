@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import centroImg from '../js/centroImg.js';
+import punchImg from '../js/punchImg.js';
 
-const CentroImg = () => {
+const PunchMain = () => {
     const [resize, setResize] = useState(window.innerWidth);
     
     const handleResize = () => {
@@ -14,17 +14,17 @@ const CentroImg = () => {
             window.removeEventListener('resize', handleResize);
         };
     }, [handleResize]);
-
+    
     return (
-        <>
-            {centroImg[0].map((item, i) => {
+        <main className="main">
+            {punchImg[0].map((item, i) => {
                 return (
                     <div key={i} className="img_container">
                         <img src={item.img} alt="" />
                     </div>
                 )
             })}
-        </>
+        </main>
     );
 };
-export default CentroImg;
+export default PunchMain;

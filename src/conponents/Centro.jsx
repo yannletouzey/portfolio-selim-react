@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import netflixImg from '../js/netflixImg.js';
+import centroImg from '../js/centroImg.js';
 
-const NetflixImg = () => {
+const CentroMain = () => {
+    
     const [resize, setResize] = useState(window.innerWidth);
     
     const handleResize = () => {
@@ -16,15 +17,15 @@ const NetflixImg = () => {
     }, [handleResize]);
 
     return (
-        <>
-            {netflixImg[0].map((item, i) => {
+        <main className="main">
+            {centroImg[0].map((item, i) => {
                 return (
                     <div key={i} className="img_container">
                         <img src={item.img} alt="" />
                     </div>
                 )
             })}
-        </>
+        </main>
     );
 };
-export default NetflixImg;
+export default CentroMain;
