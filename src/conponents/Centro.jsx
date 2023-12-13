@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
 import centroImg from '../js/centroImg.js';
 
-const CentroMain = () => {
+const CentroMain = ({ setTitleCurrent }) => {
     
+    useEffect(() => {
+        setTitleCurrent("Selim-DM - Centro Album");
+    }, []);
+
     const [resize, setResize] = useState(window.innerWidth);
     
     const handleResize = () => {

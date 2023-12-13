@@ -1,11 +1,19 @@
 import { useEffect, useState } from "react";
 import personalImg from '../js/personalImg.js';
-const Main = () => {
+const Main = ({ setTitleCurrent }) => {
+    
+    useEffect(() => {
+        setTitleCurrent("Selim-DM - Portfolio");
+    }, []);
+
     const [resize, setResize] = useState(window.innerWidth);
     
     const handleResize = () => {
         setResize(window.innerWidth);
     }
+    useEffect(() => {
+    //    setTitleCurrent("Portfolio");
+    }, []);
 
     useEffect(() => {
         window.addEventListener('resize', handleResize);
@@ -13,7 +21,7 @@ const Main = () => {
             window.removeEventListener('resize', handleResize);
         };
     }, [handleResize]);
-    
+
     return (
         <main className="main">
             {personalImg[0].map((item, i) => {

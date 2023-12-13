@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react";
 import punchImg from '../js/punchImg.js';
 
-const PunchMain = () => {
+const PunchMain = ({ setTitleCurrent }) => {
+    
+    useEffect(() => {
+        setTitleCurrent("Selim-DM - Punch Album");
+    }, []);
+
     const [resize, setResize] = useState(window.innerWidth);
     
     const handleResize = () => {

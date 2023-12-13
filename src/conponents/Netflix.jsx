@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
 import netflixImg from '../js/netflixImg.js';
 
-const NetflixMain = () => {
+const NetflixMain = ({ setTitleCurrent }) => {
     
+    useEffect(() => {
+        setTitleCurrent("Selim-DM - Netflix Album");
+    }, []);
+
     const [resize, setResize] = useState(window.innerWidth);
     
     const handleResize = () => {

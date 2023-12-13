@@ -1,0 +1,18 @@
+@use '_var';
+
+.main_work {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var.$gap-img;
+    width: 100%;
+    justify-content: center;
+    a {
+        margin: auto;
+        width: 90%;
+        max-width: calc(400px - var.$gap-img);
+    }
+    img {
+        width: 100%;
+    }
+}
