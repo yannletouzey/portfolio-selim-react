@@ -1,0 +1,22 @@
+.focus_img {
+    position: fixed;
+    z-index: 20;
+    transition-duration: 0.5s;
+    width: 92%;
+    max-width: 28rem;
+    left: 50%;
+    top: 50%;
+    transform-origin: center;
+    &-isClosed {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    &-isOpened {
+        transition-timing-function: cubic-bezier(.31,1.6,.43,.7);
+        transform: translate(-50%, -50%) scale(1);
+    }
+    img {
+        width: 100%;
+        padding: 0.5rem;
+        background-color: #fff;
+    }
+}

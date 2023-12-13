@@ -62,7 +62,6 @@ const Header = () => {
                 <a href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
             </div>
         </header>
-    
     );
 };
 export default Header;

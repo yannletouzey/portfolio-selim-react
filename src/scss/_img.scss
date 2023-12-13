@@ -3,10 +3,11 @@
 .img_container {
     width: 95%;
     aspect-ratio: 1/1;
-    // margin: 0.5rem auto;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
+    transition-duration: var.$transition-duration;
+    &:hover {
+        cursor: pointer;
+        scale: 1.01;
+    }
     @media screen and (min-width: 500px) {
         width: calc(50% - var.$gap-img);
     }

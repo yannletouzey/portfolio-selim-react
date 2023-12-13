@@ -2,7 +2,7 @@
 
 header {
     position: relative;
-    height: 5rem;
+    height: var.$header-height;
     display: flex;
     align-items: center;
     justify-content: space-between;

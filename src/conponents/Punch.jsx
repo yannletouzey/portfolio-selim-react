@@ -1,7 +1,17 @@
 import { useEffect, useState } from "react";
 import punchImg from '../js/punchImg.js';
+import FocusImg from "./FocusImg.jsx";
 
-const PunchMain = ({ setTitleCurrent }) => {
+const Punch = ({ setTitleCurrent }) => {
+    const [stateFocus, setStateFocus] = useState("focus_img-isClosed");
+    const [stateMain, setStateMain] = useState("");
+    const [tagetToFocus, setTagetToFocus] = useState(null);
+
+    const handleClickOpenFocus = (e) => {
+        setStateFocus("focus_img-isOpened");
+        setTagetToFocus(e.target.currentSrc);
+        setStateMain("main_isOpened");
+    }
     
     useEffect(() => {
         setTitleCurrent("Selim-DM - Punch Album");
@@ -21,10 +31,11 @@ const PunchMain = ({ setTitleCurrent }) => {
     }, [handleResize]);
     
     return (
-        <main className="main">
+        <main className={`main ${stateMain}`}>
+            <FocusImg stateFocus={stateFocus} setStateFocus={setStateFocus} img={tagetToFocus} setStateMain={setStateMain}/>
             {punchImg[0].map((item, i) => {
                 return (
-                    <div key={i} className="img_container">
+                    <div key={i} className="img_container" onClick={handleClickOpenFocus}>
                         <img src={item.img} alt="" />
                     </div>
                 )
@@ -32,4 +43,4 @@ const PunchMain = ({ setTitleCurrent }) => {
         </main>
     );
 };
-export default PunchMain;
+export default Punch;
