@@ -1,11 +1,12 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import Header from './Header.jsx';
 import Main from './Main.jsx';
 import Works from './Works.jsx';
 import Netflix from './Netflix.jsx';
 import Centro from './Centro.jsx';
 import Punch from './Punch.jsx';
-import { useEffect, useState } from 'react';
+import NotFound from './NotFound.jsx';
 import '../scss/style.scss';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
                 <Route path="/netflix" element={<Netflix setTitleCurrent={setTitleCurrent} />} />
                 <Route path="/centro" element={<Centro setTitleCurrent={setTitleCurrent} />} />
                 <Route path="/punch" element={<Punch setTitleCurrent={setTitleCurrent} />} />
+                <Route path="*" element={<NotFound  />} />
             </Routes>
         </Router>
     )
