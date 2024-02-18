@@ -57,7 +57,6 @@ const Header = () => {
             </h1>
             <div className={openBurger} onClick={handleClick}><span></span></div>
             <div className={openContact} ref={contactRef}>
-                <Link to="/works" className="header_title__link">Works</Link>
                 <a href="https://www.instagram.com/selimdm/?hl=fr" target="_blank" rel="noopener noreferrer">Insta<span>gram</span></a>
                 <a href="https://wa.me/33679101004" target="_blank" rel="noopener noreferrer">WhatsApp</a>
             </div>

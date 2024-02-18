@@ -1,25 +1,15 @@
 @use './_var';
 
 .img_container {
-    width: 95%;
-    aspect-ratio: 1/1;
+    width: 100%;
+    margin-bottom: 0.5rem;
     transition-duration: var.$transition-duration;
     &:hover {
         cursor: pointer;
         scale: 1.01;
     }
-    @media screen and (min-width: 500px) {
-        width: calc(50% - var.$gap-img);
-    }
-    @media screen and (min-width: 800px) {
-        width: calc(33.33% - var.$gap-img);
-    }
-    @media screen and (min-width: 1000px) {
-        width: calc(25% - var.$gap-img);
-    }
     img {
         width: 100%;
-        aspect-ratio: 1 / 1;
         object-fit: cover;
         object-position: center;
     }
