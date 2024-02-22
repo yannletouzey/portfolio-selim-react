@@ -1,10 +1,10 @@
-import personalThree from "../../js/home/personalThree.js";
-const ThreeCol = ({handleClickOpenFocus}) => {
+import punchFour from "../../js/punch/punchFour.js";
+const FourCol = ({handleClickOpenFocus}) => {
   return (
     <>
-      <div className="threeCol">
+      <div className="fourCol">
         {
-          personalThree[0].map((item, i) => {
+          punchFour[0].map((item, i) => {
             return (
               <div key={i} className="img_container" onClick={handleClickOpenFocus}>
                 <img src={item.img} alt="" />
@@ -13,9 +13,9 @@ const ThreeCol = ({handleClickOpenFocus}) => {
           })
         } 
       </div>
-      <div className="threeCol">
+      <div className="fourCol">
         {
-          personalThree[1].map((item, i) => {
+          punchFour[1].map((item, i) => {
             return (
               <div key={i} className="img_container" onClick={handleClickOpenFocus}>
                 <img src={item.img} alt="" />
@@ -24,9 +24,20 @@ const ThreeCol = ({handleClickOpenFocus}) => {
           })
         } 
       </div>
-      <div className="threeCol">
+      <div className="fourCol">
         {
-          personalThree[2].map((item, i) => {
+          punchFour[2].map((item, i) => {
+            return (
+              <div key={i} className="img_container" onClick={handleClickOpenFocus}>
+                <img src={item.img} alt="" />
+              </div>
+            )
+          })
+        } 
+      </div>
+      <div className="fourCol">
+        {
+          punchFour[3].map((item, i) => {
             return (
               <div key={i} className="img_container" onClick={handleClickOpenFocus}>
                 <img src={item.img} alt="" />
@@ -38,4 +49,4 @@ const ThreeCol = ({handleClickOpenFocus}) => {
     </>
   )
 }
-export default ThreeCol;
+export default FourCol;

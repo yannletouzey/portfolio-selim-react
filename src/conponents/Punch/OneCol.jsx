@@ -1,9 +1,9 @@
-import personal from "../../js/home/personal.js";
+import punch from "../../js/punch/punch.js";
 const OneCol = ({handleClickOpenFocus}) => {
   return (
     <div className="oneCol">
       {
-        personal.map((item, i) => {
+        punch.map((item, i) => {
           return (
             <div key={i} className="img_container" onClick={handleClickOpenFocus}>
               <img src={item.img} alt="" />

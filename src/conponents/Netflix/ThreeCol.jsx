@@ -1,10 +1,10 @@
-import personalThree from "../../js/home/personalThree.js";
+import netflixThree from "../../js/netflix/netflixFour.js";
 const ThreeCol = ({handleClickOpenFocus}) => {
   return (
     <>
       <div className="threeCol">
         {
-          personalThree[0].map((item, i) => {
+          netflixThree[0].map((item, i) => {
             return (
               <div key={i} className="img_container" onClick={handleClickOpenFocus}>
                 <img src={item.img} alt="" />
@@ -15,7 +15,7 @@ const ThreeCol = ({handleClickOpenFocus}) => {
       </div>
       <div className="threeCol">
         {
-          personalThree[1].map((item, i) => {
+          netflixThree[1].map((item, i) => {
             return (
               <div key={i} className="img_container" onClick={handleClickOpenFocus}>
                 <img src={item.img} alt="" />
@@ -26,7 +26,7 @@ const ThreeCol = ({handleClickOpenFocus}) => {
       </div>
       <div className="threeCol">
         {
-          personalThree[2].map((item, i) => {
+          netflixThree[2].map((item, i) => {
             return (
               <div key={i} className="img_container" onClick={handleClickOpenFocus}>
                 <img src={item.img} alt="" />
