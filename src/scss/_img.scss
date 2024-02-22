@@ -1,16 +1,16 @@
 @use './_var';
 
 .img_container {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  transition-duration: var.$transition-duration;
+  // &:hover {
+  //     cursor: pointer;
+  //     scale: 1.01;
+  // }
+  img {
     width: 100%;
-    margin-bottom: 0.5rem;
-    transition-duration: var.$transition-duration;
-    // &:hover {
-    //     cursor: pointer;
-    //     scale: 1.01;
-    // }
-    img {
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
-    }
+    object-fit: cover;
+    object-position: center;
+  }
 }

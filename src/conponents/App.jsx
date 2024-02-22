@@ -8,21 +8,21 @@ import Footer from './Footer.jsx';
 
 function App() {
 
-    const [titleCurrent, setTitleCurrent] = useState("");
+  const [titleCurrent, setTitleCurrent] = useState("");
 
-    useEffect(() => {
-        document.title = titleCurrent;
-    }, [titleCurrent]);
+  useEffect(() => {
+    document.title = titleCurrent;
+  }, [titleCurrent]);
 
-    return (
-        <Router>
-            <Header />
-            <Routes>
-                <Route path="/" element={<Home setTitleCurrent={setTitleCurrent} />} />
-                <Route path="*" element={<NotFound  />} />
-            </Routes>
-            <Footer />
-        </Router>
-    )
+  return (
+    <Router>
+      <Header />
+        <Routes>
+          <Route path="/" element={<Home setTitleCurrent={setTitleCurrent} />} />
+          <Route path="*" element={<NotFound  />} />
+        </Routes>
+      <Footer />
+    </Router>
+  )
 }
 export default App;

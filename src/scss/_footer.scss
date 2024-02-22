@@ -1,13 +1,13 @@
 .footer {
-    height: 5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    @media screen and (min-width: 700px) {
-        flex-direction: row;
-    }
-    &__contact {
-        text-decoration: none;
-    }
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  @media screen and (min-width: 700px) {
+    flex-direction: row;
+  }
+  &__contact {
+    text-decoration: none;
+  }
 }
