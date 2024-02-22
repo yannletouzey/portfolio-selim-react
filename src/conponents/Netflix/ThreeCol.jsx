@@ -1,4 +1,4 @@
-import netflixThree from "../../js/netflix/netflixFour.js";
+import netflixThree from "../../js/netflix/netflixThree.js";
 const ThreeCol = ({handleClickOpenFocus}) => {
   return (
     <>
