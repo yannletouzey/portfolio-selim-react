@@ -1,40 +1,22 @@
-import PunchThree from "../../js/punch/punchThree.js";
+import punchThree from "../../js/punch/punchThree.js";
 const ThreeCol = ({handleClickOpenFocus}) => {
   return (
     <>
-      <div className="threeCol">
-        {
-          PunchThree[0].map((item, i) => {
-            return (
-              <div key={i} className="img_container" onClick={handleClickOpenFocus}>
-                <img src={item.img} alt="" />
-              </div>
-            )
-          })
-        } 
-      </div>
-      <div className="threeCol">
-        {
-          PunchThree[1].map((item, i) => {
-            return (
-              <div key={i} className="img_container" onClick={handleClickOpenFocus}>
-                <img src={item.img} alt="" />
-              </div>
-            )
-          })
-        } 
-      </div>
-      <div className="threeCol">
-        {
-          PunchThree[2].map((item, i) => {
-            return (
-              <div key={i} className="img_container" onClick={handleClickOpenFocus}>
-                <img src={item.img} alt="" />
-              </div>
-            )
-          })
-        } 
-      </div>
+      {punchThree.map((column, iColumn) => {
+        return (
+          <div key={iColumn} className="threeCol">
+            {
+              column.map((image, iImage) => {
+                return (
+                  <div key={iImage} className="img_container" onClick={handleClickOpenFocus}>
+                    <img src={image.img} alt="" />
+                  </div>
+                )
+              })
+            } 
+          </div>
+        )
+      })}
     </>
   )
 }

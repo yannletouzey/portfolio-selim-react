@@ -5,7 +5,7 @@ import OneCol from "./OneCol.jsx";
 import ThreeCol from "./ThreeCol.jsx";
 import TwoCol from "./TwoCol.jsx";
 
-const Home = ({ setTitleCurrent }) => {
+const Home = ({ setTitleCurrent, resize }) => {
   const [stateFocus, setStateFocus] = useState("focus_img-isClosed");
   const [stateMain, setStateMain] = useState("");
   const [tagetToFocus, setTagetToFocus] = useState(null);
@@ -20,18 +20,7 @@ const Home = ({ setTitleCurrent }) => {
     setTitleCurrent("Selim-DM - photo Album");
   }, []);
 
-  const [resize, setResize] = useState(window.innerWidth);
-
-  const handleResize = () => {
-    setResize(window.innerWidth);
-  }
-
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [handleResize]);
+  
 
   return (
     <main className={`main ${stateMain}`}>

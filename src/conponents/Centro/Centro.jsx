@@ -4,7 +4,7 @@ import OneCol from "./OneCol.jsx";
 import TwoCol from "./TwoCol.jsx";
 import ThreeCol from "./ThreeCol.jsx";
 import FourCol from "./FourCol.jsx";
-const Centro = ({ setTitleCurrent }) => {
+const Centro = ({ setTitleCurrent, resize }) => {
   const [stateFocus, setStateFocus] = useState("focus_img-isClosed");
   const [stateMain, setStateMain] = useState("");
   const [tagetToFocus, setTagetToFocus] = useState(null);
@@ -18,19 +18,6 @@ const Centro = ({ setTitleCurrent }) => {
   useEffect(() => {
     setTitleCurrent("Selim-DM - Centro Album");
   }, []);
-
-  const [resize, setResize] = useState(window.innerWidth);
-  
-  const handleResize = () => {
-    setResize(window.innerWidth);
-  }
-  
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [handleResize]);
 
   return (
     <main className={`main ${stateMain}`}>

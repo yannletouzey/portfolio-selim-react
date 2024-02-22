@@ -5,6 +5,7 @@ import centroLogo from '../assets/img/logo/centro.png';
 import { useEffect } from 'react';
 
 const Works = ({ setTitleCurrent }) => {
+  
   useEffect(() => {
     setTitleCurrent("Selim-DM - Works");
   }, []);

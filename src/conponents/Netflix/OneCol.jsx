@@ -1,17 +1,23 @@
-import netfllix from "../../js/netflix/netflix.js";
+import netflix from "../../js/netflix/netflix.js";
 const OneCol = ({handleClickOpenFocus}) => {
   return (
-    <div className="oneCol">
-      {
-        netfllix.map((item, i) => {
-          return (
-            <div key={i} className="img_container" onClick={handleClickOpenFocus}>
-              <img src={item.img} alt="" />
-            </div>
-          )
-        })
-      } 
-    </div>
+    <>
+      {netflix.map((column, iColumn) => {
+        return (
+          <div key={iColumn} className="oneCol">
+            {
+              column.map((image, iImage) => {
+                return (
+                  <div key={iImage} className="img_container" onClick={handleClickOpenFocus}>
+                    <img src={image.img} alt="" />
+                  </div>
+                )
+              })
+            } 
+          </div>
+        )
+      })}
+    </>
   )
 }
 export default OneCol;

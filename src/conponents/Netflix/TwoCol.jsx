@@ -2,28 +2,21 @@ import netflixTwo from "../../js/netflix/netflixTwo.js";
 const TwoCol = ({handleClickOpenFocus}) => {
   return (
     <>
-      <div className="twoCol">
-        {
-          netflixTwo[0].map((item, i) => {
-            return (
-              <div key={i} className="img_container" onClick={handleClickOpenFocus}>
-                <img src={item.img} alt="" />
-              </div>
-            )
-          })
-        } 
-      </div>
-      <div className="twoCol">
-        {
-          netflixTwo[1].map((item, i) => {
-            return (
-              <div key={i} className="img_container" onClick={handleClickOpenFocus}>
-                <img src={item.img} alt="" />
-              </div>
-            )
-          })
-        } 
-      </div>
+      {netflixTwo.map((column, iColumn) => {
+        return (
+          <div key={iColumn} className="twoCol">
+            {
+              column.map((image, iImage) => {
+                return (
+                  <div key={iImage} className="img_container" onClick={handleClickOpenFocus}>
+                    <img src={image.img} alt="" />
+                  </div>
+                )
+              })
+            } 
+          </div>
+        )
+      })}
     </>
   )
 }
