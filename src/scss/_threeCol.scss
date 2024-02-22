@@ -1,0 +1,5 @@
+@use './_var';
+
+.threeCol {
+  width: calc((100% - (var.$space-between-img * 3)) / 3);
+}

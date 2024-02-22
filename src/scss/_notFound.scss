@@ -1,64 +1,64 @@
 @use './_var.scss';
 
 .section {
-    &__notFound {
-        height: 40rem;
-        @media screen and (min-width: 38rem) {
-            height: 25rem;
-        }
-        svg {
-            position: absolute;
-            left: 50%;
-            top: 70%;
-            transform: translate(-50%, -50%) scale(3);
-            @media screen and (min-width: 30rem) {
-                top: 60%;
-            }
-            @media screen and (min-width: 38rem) {
-                top: 50%;
-            }
-            &:nth-child(1) {
-                z-index: 2;
-                fill: var.$background-color;
-                animation: move 1s 2s ease-out forwards;
-            }
-            &:nth-child(2) {
-                z-index: 1;
-                left: 50%;
-                animation: fillLetter 2s 1s ease-out forwards;
-            }
-        }
-        p {
-            position: absolute;
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-            -webkit-text-stroke: 4px black;
-            text-stroke: 4px black;
-            text-align: center;
-            width: 100%;
-            color: transparent;
-            letter-spacing: 0.5rem;
-            top: 15%;
-            font-size: 6rem;
-        }
+  &__notFound {
+    height: 40rem;
+    @media screen and (min-width: 38rem) {
+        height: 25rem;
     }
+    svg {
+      position: absolute;
+      left: 50%;
+      top: 70%;
+      transform: translate(-50%, -50%) scale(3);
+      @media screen and (min-width: 30rem) {
+        top: 60%;
+      }
+      @media screen and (min-width: 38rem) {
+        top: 50%;
+      }
+      &:nth-child(1) {
+        z-index: 2;
+        fill: var.$background-color;
+        animation: move 1s 2s ease-out forwards;
+      }
+      &:nth-child(2) {
+        z-index: 1;
+        left: 50%;
+        animation: fillLetter 2s 1s ease-out forwards;
+      }
+    }
+    p {
+      position: absolute;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      -webkit-text-stroke: 4px black;
+      text-stroke: 4px black;
+      text-align: center;
+      width: 100%;
+      color: transparent;
+      letter-spacing: 0.5rem;
+      top: 15%;
+      font-size: 6rem;
+    }
+  }
 }
 @keyframes strokeLetter {
-    to {
-        stroke-dashoffset: 0;
-    }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 @keyframes fillLetter {
-    from {
-        stroke: 0;
-    }
-    to {
-        stroke: 2px;
-        fill: black;
-        transform: translate(-50%, -50%) scale(3);
-    }
+  from {
+    stroke: 0;
+  }
+  to {
+    stroke: 2px;
+    fill: black;
+    transform: translate(-50%, -50%) scale(3);
+  }
 }
 @keyframes move {
-    to {
-        transform: translate(-60%, -50%) scale(3);
-    }
+  to {
+    transform: translate(-60%, -50%) scale(3);
+  }
 }

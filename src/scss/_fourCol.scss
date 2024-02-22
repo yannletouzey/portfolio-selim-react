@@ -1,0 +1,5 @@
+@use './_var';
+
+.fourCol {
+  width: calc((100% - (var.$space-between-img * 4)) / 4);
+}

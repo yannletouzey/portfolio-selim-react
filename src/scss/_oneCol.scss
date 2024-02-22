@@ -1,0 +1,5 @@
+@use './_var';
+
+.oneCol {
+  width: calc(100% - 1rem);
+}

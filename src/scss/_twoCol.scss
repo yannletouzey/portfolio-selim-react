@@ -1,0 +1,5 @@
+@use './_var';
+
+.twoCol {
+  width: calc(50% - var.$space-between-img);
+}
