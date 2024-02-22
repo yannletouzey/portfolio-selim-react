@@ -1,4 +1,4 @@
-import PunchThree from "../../js/punch/PunchThree.js";
+import PunchThree from "../../js/punch/punchThree.js";
 const ThreeCol = ({handleClickOpenFocus}) => {
   return (
     <>
