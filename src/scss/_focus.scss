@@ -25,3 +25,32 @@
     background-color: #fff;
   }
 }
+.btn_close {
+  position: absolute;
+  z-index: 200;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+.btn_close::before {
+  content: '';
+  position: absolute;
+  translate: -50% -50%;
+  background: #fff;
+  z-index: 300;
+  width: 30px;
+  height: 3px;
+  rotate: z 45deg;
+}
+.btn_close::after {
+  content: '';
+  position: absolute;
+  translate: -50% -50%;
+  background: #fff;
+  z-index: 300;
+  width: 30px;
+  height: 3px;
+  rotate: z -45deg;
+}

@@ -9,7 +9,11 @@ import Works from './Works.jsx';
 import Netflix from './Netflix/Netflix.jsx';
 import Centro from './Centro/Centro.jsx';
 import Punch from './Punch/Punch.jsx';
+
 function App() {
+  const [stateFocus, setStateFocus] = useState("focus_img-isClosed");
+
+  const [open, setOpen] = useState(false);
 
   const [titleCurrent, setTitleCurrent] = useState("");
   const [resize, setResize] = useState(window.innerWidth);
@@ -29,15 +33,16 @@ function App() {
     document.title = titleCurrent;
   }, [titleCurrent]);
 
+
   return (
     <Router>
       <Header />
         <Routes>
-          <Route path="/" element={<Home setTitleCurrent={setTitleCurrent} resize={resize} />} />
-          <Route path="/works" element={<Works setTitleCurrent={setTitleCurrent} />} />
-          <Route path="/netflix" element={<Netflix setTitleCurrent={setTitleCurrent} resize={resize} />} />
-          <Route path="/centro" element={<Centro setTitleCurrent={setTitleCurrent} resize={resize} />} />
-          <Route path="/punch" element={<Punch setTitleCurrent={setTitleCurrent} resize={resize} />} />
+          <Route path="/" element={<Home setTitleCurrent={setTitleCurrent} resize={resize} stateFocus={stateFocus} setStateFocus={setStateFocus} />} />
+          <Route path="/works" element={<Works setTitleCurrent={setTitleCurrent} stateFocus={stateFocus} setStateFocus={setStateFocus} />} />
+          <Route path="/netflix" element={<Netflix setTitleCurrent={setTitleCurrent} resize={resize} stateFocus={stateFocus} setStateFocus={setStateFocus} />} />
+          <Route path="/centro" element={<Centro setTitleCurrent={setTitleCurrent} resize={resize} stateFocus={stateFocus} setStateFocus={setStateFocus} />} />
+          <Route path="/punch" element={<Punch setTitleCurrent={setTitleCurrent} resize={resize} stateFocus={stateFocus} setStateFocus={setStateFocus} />} />
           <Route path="*" element={<NotFound  />} />
         </Routes>
       <Footer />
