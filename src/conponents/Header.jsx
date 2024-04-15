@@ -53,13 +53,13 @@ const Header = () => {
   return (
     <header className="header">
       <h1 className="header__title">
-        <Link to="/" className="header__title__link">Selim<span className={openTitle}>-DM</span></Link>
+        <Link to="/" className="header__title__link" onClick={() => (setOpenBurger("burger burger_is-closed"), setOpenContact("contact contact_is-closed"), setOpenTitle("title__is-open"))}>Selim<span className={openTitle}>-DM</span></Link>
       </h1>
       <div className={openBurger} onClick={handleClick}><span></span></div>
       <div className={openContact} ref={contactRef}>
-        <Link to="/works" className="">Works</Link>
-        <a href="https://www.instagram.com/selimdm/?hl=fr" target="_blank" rel="noopener noreferrer">Insta<span>gram</span></a>
-        <a href="https://wa.me/33679101004" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <Link to="/works" className="" onClick={handleClick}>Works</Link>
+        <a href="https://www.instagram.com/selimdm/?hl=fr" target="_blank" rel="noopener noreferrer" onClick={handleClick}>Insta<span>gram</span></a>
+        <a href="https://wa.me/33679101004" target="_blank" rel="noopener noreferrer" onClick={handleClick}>WhatsApp</a>
       </div>
     </header>
   );

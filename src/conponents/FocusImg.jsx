@@ -13,10 +13,10 @@ const FocusImg = ({stateFocus, setStateFocus, setStateMain, img, resize }) => {
     if (stateFocus === "focus_img-isOpened") {
       if (resize >= 585) {
         btnCloseRef.current.style.top = `-${(imgRef.current.height / 2) + 8}px`
-        btnCloseRef.current.style.right = '-3.5rem'
+        btnCloseRef.current.style.right = '-3rem'
       } else {
-        btnCloseRef.current.style.top = `-${(imgRef.current.height / 2) - 16}px`
-        btnCloseRef.current.style.right = '2rem'
+        btnCloseRef.current.style.top = `-${(imgRef.current.height / 2) - 8}px`
+        btnCloseRef.current.style.right = '0.8rem'
       }
     }
   }, [stateFocus, resize]);
