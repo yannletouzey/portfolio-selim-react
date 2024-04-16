@@ -10,7 +10,7 @@ import Netflix from './Netflix/Netflix.jsx';
 import Centro from './Centro/Centro.jsx';
 import Punch from './Punch/Punch.jsx';
 
-function App() {
+export default function App() {
   const [stateFocus, setStateFocus] = useState("focus_img-isClosed");
 
   const [titleCurrent, setTitleCurrent] = useState("");
@@ -47,4 +47,3 @@ function App() {
     </Router>
   )
 }
-export default App;

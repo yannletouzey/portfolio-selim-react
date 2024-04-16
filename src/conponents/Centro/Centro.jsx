@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import FocusImg from "../FocusImg.jsx";
-import OneCol from "./OneCol.jsx";
-import TwoCol from "./TwoCol.jsx";
-import ThreeCol from "./ThreeCol.jsx";
-import FourCol from "./FourCol.jsx";
-const Centro = ({ setTitleCurrent, resize, stateFocus, setStateFocus }) => {
+import Template from "../Template.jsx";
+import centro from "../../js/centro/centro.js";
+import centroTwo from "../../js/centro/centroTwo.js";
+import centroThree from "../../js/centro/centroThree.js";
+import centroFour from "../../js/centro/centroFour.js";
+
+export default function Centro({ setTitleCurrent, resize, stateFocus, setStateFocus }) {
 
   const [stateMain, setStateMain] = useState("");
   const [targetToFocus, settargetToFocus] = useState(null);
@@ -16,17 +18,16 @@ const Centro = ({ setTitleCurrent, resize, stateFocus, setStateFocus }) => {
   }
   
   useEffect(() => {
-    setTitleCurrent("Selim-DM - Centro Album");
+    setTitleCurrent("Selim-DM - centro Album");
   }, []);
 
   return (
     <main className={`main ${stateMain}`}>
     <FocusImg stateFocus={stateFocus} resize={resize} setStateFocus={setStateFocus} img={targetToFocus} setStateMain={setStateMain}/>
-      {resize > 0 && resize < 500 && <OneCol handleClickOpenFocus={handleClickOpenFocus} />}
-      {resize >= 500 && resize < 700 && <TwoCol handleClickOpenFocus={handleClickOpenFocus} />}
-      {resize >= 700 && resize < 1000 && <ThreeCol handleClickOpenFocus={handleClickOpenFocus} />}
-      {resize >= 1000 && <FourCol handleClickOpenFocus={handleClickOpenFocus} />}
+      {resize > 0 && resize < 500 && <Template handleClickOpenFocus={handleClickOpenFocus} dataImg={centro} cl={"oneCol"} />}
+      {resize >= 500 && resize < 700 && <Template handleClickOpenFocus={handleClickOpenFocus} dataImg={centroTwo} cl={"twoCol"}/>}
+      {resize >= 700 && resize < 1000 && <Template handleClickOpenFocus={handleClickOpenFocus} dataImg={centroThree} cl={"threeCol"}/>}
+      {resize >= 1000 && <Template handleClickOpenFocus={handleClickOpenFocus} dataImg={centroFour} cl={"fourCol"}/>}
     </main>
   );
 };
-export default Centro;

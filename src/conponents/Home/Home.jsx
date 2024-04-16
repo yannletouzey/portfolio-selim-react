@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import FocusImg from "../FocusImg.jsx";
-import FourCol from "./FourCol.jsx";
-import OneCol from "./OneCol.jsx";
-import ThreeCol from "./ThreeCol.jsx";
-import TwoCol from "./TwoCol.jsx";
+import Template from "../Template.jsx";
+import personal from "../../js/home/personal.js";
+import personalTwo from "../../js/home/personalTwo.js";
+import personalThree from "../../js/home/personalThree.js";
+import personalFour from "../../js/home/personalFour.js";
 
 const Home = ({ setTitleCurrent, resize, stateFocus, setStateFocus }) => {
-
 
   const [stateMain, setStateMain] = useState("");
   const [targetToFocus, settargetToFocus] = useState(null);
@@ -24,10 +24,10 @@ const Home = ({ setTitleCurrent, resize, stateFocus, setStateFocus }) => {
   return (
     <main className={`main ${stateMain}`}>
       <FocusImg stateFocus={stateFocus} resize={resize} setStateFocus={setStateFocus} img={targetToFocus} setStateMain={setStateMain}/>
-      {resize > 0 && resize < 500 && <OneCol handleClickOpenFocus={handleClickOpenFocus}/>}
-      {resize >= 500 && resize < 700 && <TwoCol handleClickOpenFocus={handleClickOpenFocus} />}
-      {resize >= 700 && resize < 1000 && <ThreeCol handleClickOpenFocus={handleClickOpenFocus} />}
-      {resize >= 1000 && <FourCol handleClickOpenFocus={handleClickOpenFocus} />}
+      {resize > 0 && resize < 500 && <Template handleClickOpenFocus={handleClickOpenFocus} dataImg={personal} cl={"oneCol"}/>}
+      {resize >= 500 && resize < 700 && <Template handleClickOpenFocus={handleClickOpenFocus} dataImg={personalTwo} cl={"twoCol"}/>}
+      {resize >= 700 && resize < 1000 && <Template handleClickOpenFocus={handleClickOpenFocus} dataImg={personalThree} cl={"threeCol"} />}
+      {resize >= 1000 && <Template handleClickOpenFocus={handleClickOpenFocus} dataImg={personalFour} cl={"fourCol"} />}
     </main>
   );
 };

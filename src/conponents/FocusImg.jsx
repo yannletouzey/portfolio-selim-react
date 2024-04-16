@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-const FocusImg = ({stateFocus, setStateFocus, setStateMain, img, resize }) => {
+export default function FocusImg({stateFocus, setStateFocus, setStateMain, img, resize }) {
   const handleClickCloseFocus = () => {
     setStateFocus("focus_img-isClosed");
     setStateMain("");
@@ -20,9 +20,6 @@ const FocusImg = ({stateFocus, setStateFocus, setStateMain, img, resize }) => {
       }
     }
   }, [stateFocus, resize]);
-  
-  useEffect(() => {    
-  }, [resize])
 
   return (
     <div className={`focus_img ${stateFocus}`}>
@@ -31,4 +28,3 @@ const FocusImg = ({stateFocus, setStateFocus, setStateMain, img, resize }) => {
     </div>
   )
 }
-export default FocusImg;
