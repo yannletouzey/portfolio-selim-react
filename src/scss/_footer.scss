@@ -9,5 +9,22 @@
   }
   &__contact {
     text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    &::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #000;
+    }
   }
+}
+.footer__contact:hover {
+  transition-duration: 0.3s;
+  scale: 1.1;
+}
+.footer__contact:hover.footer__contact::after {
+  transition-duration: 0.3s;
+  width: 100%;
 }

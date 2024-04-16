@@ -57,9 +57,9 @@ const Header = () => {
       </h1>
       <div className={openBurger} onClick={handleClick}><span></span></div>
       <div className={openContact} ref={contactRef}>
-        <Link to="/works" className="" onClick={handleClick}>Works</Link>
-        <a href="https://www.instagram.com/selimdm/?hl=fr" target="_blank" rel="noopener noreferrer" onClick={handleClick}>Insta<span>gram</span></a>
-        <a href="https://wa.me/33679101004" target="_blank" rel="noopener noreferrer" onClick={handleClick}>WhatsApp</a>
+        <Link to="/works" className="contact__link" onClick={handleClick}>Works</Link>
+        <a className='contact__link' href="https://www.instagram.com/selimdm/?hl=fr" target="_blank" rel="noopener noreferrer" onClick={handleClick}>Insta<span>gram</span></a>
+        <a className='contact__link' href="https://wa.me/33679101004" target="_blank" rel="noopener noreferrer" onClick={handleClick}>WhatsApp</a>
       </div>
     </header>
   );
