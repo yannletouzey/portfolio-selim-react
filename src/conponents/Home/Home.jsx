@@ -7,6 +7,7 @@ import TwoCol from "./TwoCol.jsx";
 
 const Home = ({ setTitleCurrent, resize, stateFocus, setStateFocus }) => {
 
+
   const [stateMain, setStateMain] = useState("");
   const [targetToFocus, settargetToFocus] = useState(null);
 
@@ -23,7 +24,7 @@ const Home = ({ setTitleCurrent, resize, stateFocus, setStateFocus }) => {
   return (
     <main className={`main ${stateMain}`}>
       <FocusImg stateFocus={stateFocus} resize={resize} setStateFocus={setStateFocus} img={targetToFocus} setStateMain={setStateMain}/>
-      {resize > 0 && resize < 500 && <OneCol handleClickOpenFocus={handleClickOpenFocus} />}
+      {resize > 0 && resize < 500 && <OneCol handleClickOpenFocus={handleClickOpenFocus}/>}
       {resize >= 500 && resize < 700 && <TwoCol handleClickOpenFocus={handleClickOpenFocus} />}
       {resize >= 700 && resize < 1000 && <ThreeCol handleClickOpenFocus={handleClickOpenFocus} />}
       {resize >= 1000 && <FourCol handleClickOpenFocus={handleClickOpenFocus} />}

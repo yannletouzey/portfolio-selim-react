@@ -13,8 +13,6 @@ import Punch from './Punch/Punch.jsx';
 function App() {
   const [stateFocus, setStateFocus] = useState("focus_img-isClosed");
 
-  const [open, setOpen] = useState(false);
-
   const [titleCurrent, setTitleCurrent] = useState("");
   const [resize, setResize] = useState(window.innerWidth);
 

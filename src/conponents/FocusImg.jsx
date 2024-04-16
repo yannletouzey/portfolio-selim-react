@@ -25,7 +25,7 @@ const FocusImg = ({stateFocus, setStateFocus, setStateMain, img, resize }) => {
   }, [resize])
 
   return (
-    <div className={`focus_img ${stateFocus}`} onClick={handleClickCloseFocus}>
+    <div className={`focus_img ${stateFocus}`}>
       <img src={img} alt="" ref={imgRef} />
       <button ref={btnCloseRef} className="btn_close" onClick={handleClickCloseFocus}></button>
     </div>

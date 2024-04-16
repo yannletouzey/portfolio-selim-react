@@ -1,18 +1,17 @@
 .focus_img {
   position: fixed;
   z-index: 20;
-  transition-duration: 0.5s;
+  transition-duration: 0.4s;
   width: 92%;
   max-width: 28rem;
   left: 50%;
   top: 50%;
   transform-origin: center;
-  cursor: pointer;
   &-isClosed {
     transform: translate(-50%, -50%) scale(0);
   }
   &-isOpened {
-    transition-timing-function: cubic-bezier(.31,1.6,.43,.7);
+    transition-timing-function: ease-out;
     transform: translate(-50%, -50%) scale(1);
   }
   img {
@@ -30,11 +29,11 @@
   z-index: 200;
   border: none;
   background-color: transparent;
-  cursor: pointer;
   width: 30px;
   height: 30px;
+  cursor: pointer;
 }
-.btn_close::before {
+.btn_close::before, .btn_close::after {
   content: '';
   position: absolute;
   translate: -50% -50%;
@@ -42,15 +41,10 @@
   z-index: 300;
   width: 30px;
   height: 3px;
+}
+.btn_close::before {
   rotate: z 45deg;
 }
 .btn_close::after {
-  content: '';
-  position: absolute;
-  translate: -50% -50%;
-  background: #fff;
-  z-index: 300;
-  width: 30px;
-  height: 3px;
   rotate: z -45deg;
 }
