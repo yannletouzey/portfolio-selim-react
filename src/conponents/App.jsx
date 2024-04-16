@@ -9,6 +9,7 @@ import Works from './Works.jsx';
 import Netflix from './Netflix/Netflix.jsx';
 import Centro from './Centro/Centro.jsx';
 import Punch from './Punch/Punch.jsx';
+import About from './About.jsx';
 
 export default function App() {
   const [stateFocus, setStateFocus] = useState("focus_img-isClosed");
@@ -41,6 +42,7 @@ export default function App() {
           <Route path="/netflix" element={<Netflix setTitleCurrent={setTitleCurrent} resize={resize} stateFocus={stateFocus} setStateFocus={setStateFocus} />} />
           <Route path="/centro" element={<Centro setTitleCurrent={setTitleCurrent} resize={resize} stateFocus={stateFocus} setStateFocus={setStateFocus} />} />
           <Route path="/punch" element={<Punch setTitleCurrent={setTitleCurrent} resize={resize} stateFocus={stateFocus} setStateFocus={setStateFocus} />} />
+          <Route path="/about" element={<About setTitleCurrent={setTitleCurrent} resize={resize} stateFocus={stateFocus} setStateFocus={setStateFocus} />} />
           <Route path="*" element={<NotFound  />} />
         </Routes>
       <Footer />

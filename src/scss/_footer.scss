@@ -7,10 +7,9 @@
   @media screen and (min-width: 700px) {
     flex-direction: row;
   }
-  &__contact {
+  &__contact, &__about {
     text-decoration: none;
     color: #000;
-    text-transform: uppercase;
     &::after {
       content: '';
       display: block;
@@ -20,11 +19,14 @@
     }
   }
 }
-.footer__contact:hover {
+.footer__contact:hover, .footer__about:hover {
   transition-duration: 0.3s;
   scale: 1.1;
 }
-.footer__contact:hover.footer__contact::after {
+.footer__contact:hover.footer__contact::after, .footer__about:hover.footer__about::after {
   transition-duration: 0.3s;
   width: 100%;
+}
+.footer__about {
+  
 }
