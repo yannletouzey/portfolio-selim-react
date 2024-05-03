@@ -1,12 +1,15 @@
 @use './_var';
 
 .header {
-  position: relative;
+  position: fixed;
   height: var.$header-height;
+  background-color:transparent;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-family: sans-serif;
+  mix-blend-mode: difference;
   &__title {
     padding: 0 1rem;
     @media screen and (min-width: 500px) {
@@ -14,7 +17,7 @@
     }
     &__link {
       text-decoration: none;
-      color: var.$text-color;
+      color: var.$main-bg-color;
     }
     span {
       transition-duration: var.$transition-duration;
@@ -26,7 +29,3 @@
 .title__is-closed {
   scale: 0 1;
 }
-
-
-
-

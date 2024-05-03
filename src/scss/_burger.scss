@@ -14,7 +14,7 @@
     transition-duration: var.$transition-duration;
     width: var.$burger-width;
     height: var.$burger-height;
-    background-color: #000;
+    background-color: var.$main-bg-color;
     position: absolute;
     top: 50%;
     translate: 0 -50%;
@@ -24,7 +24,7 @@
     transition-duration: var.$transition-duration;
     width: var.$burger-width;
     height: var.$burger-height;
-    background-color: #000;
+    background-color: var.$main-bg-color;
     position: absolute;
     top: calc(50% - (var.$burger-height * 2));
     translate: 0 -50%;
@@ -35,7 +35,7 @@
     transition-duration: var.$transition-duration;
     width: var.$burger-width;
     height: var.$burger-height;
-    background-color: #000;
+    background-color: var.$main-bg-color;
     position: absolute;
     top: calc(50% + (var.$burger-height * 2));
     translate: 0 -50%;
