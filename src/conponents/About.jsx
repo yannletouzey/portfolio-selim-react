@@ -6,9 +6,9 @@ export default function About({ setTitleCurrent }) {
     setTitleCurrent("Selim-DM - About me");
   }, []);
   return (
-    <div className="about">
+    <main className="main main__about">
       <h2>Coming soon</h2>
       <Link to="/" className="return-home">HOME</Link>
-    </div>
+    </main>
   )
 }
