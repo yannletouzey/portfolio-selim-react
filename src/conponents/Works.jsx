@@ -1,10 +1,16 @@
 import { Link } from 'react-router-dom';
-import netflixLogo from '../assets/img/logo/netflix.png';
-import punchLogo from '../assets/img/logo/punch.png';
-import centroLogo from '../assets/img/logo/centro.png';
-import { useEffect } from 'react';
+import { useEffect, } from 'react';
 
 const Works = ({ setTitleCurrent }) => {
+
+  const handleHover = (e) => {
+    e.currentTarget.children[0].style.mixBlendMode = 'difference';
+    e.currentTarget.children[1].style.height = '100%';
+  }
+  const handleLeave = (e) => {
+    e.currentTarget.children[0].style.mixBlendMode = 'none';
+    e.currentTarget.children[1].style.height = '0%';
+  }
   
   useEffect(() => {
     setTitleCurrent("Selim-DM - Works");
@@ -12,9 +18,18 @@ const Works = ({ setTitleCurrent }) => {
 
   return (
     <main className="main main_work">
-      <Link to="/netflix" className="header_title__link"><img src={netflixLogo} alt="Logo de Netflix"/></Link>
-      <Link to="/punch" className="header_title__link"><img src={punchLogo} alt="Logo de Punch"/></Link>
-      <Link to="/centro" className="header_title__link"><img src={centroLogo} alt="Logo de Centro"/></Link>
+      <div className="link_container" onMouseEnter={handleHover} onMouseLeave={handleLeave}>
+        <Link to="/netflix" className="link_container-link">Netflix</Link>
+        <div className='cube-hover'></div>
+      </div>
+      <div className="link_container" onMouseEnter={handleHover} onMouseLeave={handleLeave}>
+        <Link to="/punch" className="link_container-link">Punch</Link>
+        <div className='cube-hover'></div>
+      </div>
+      <div className="link_container" onMouseEnter={handleHover} onMouseLeave={handleLeave}>
+        <Link to="/centro" className="link_container-link">Centro</Link>
+        <div className='cube-hover'></div>
+      </div>
     </main>
   )
 }
