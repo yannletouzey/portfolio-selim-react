@@ -23,7 +23,7 @@ export default function Punch({ setTitleCurrent, resize, stateFocus, setStateFoc
 
   return (
     <main className={`main ${stateMain}`}>
-    <FocusImg stateFocus={stateFocus} resize={resize} setStateFocus={setStateFocus} img={targetToFocus} setStateMain={setStateMain}/>
+      <FocusImg stateFocus={stateFocus} resize={resize} setStateFocus={setStateFocus} img={targetToFocus} setStateMain={setStateMain}/>
       {resize > 0 && resize < 500 && <Template handleClickOpenFocus={handleClickOpenFocus} dataImg={punch} cl={"oneCol"} />}
       {resize >= 500 && resize < 700 && <Template handleClickOpenFocus={handleClickOpenFocus} dataImg={punchTwo} cl={"twoCol"}/>}
       {resize >= 700 && resize < 1000 && <Template handleClickOpenFocus={handleClickOpenFocus} dataImg={punchThree} cl={"threeCol"}/>}

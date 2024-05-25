@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom';
-import { useEffect, } from 'react';
+import { useEffect, useRef } from 'react';
 
 const Works = ({ setTitleCurrent }) => {
+  const pages = ['Netflix', 'Punch', 'Centro'];
 
+  const pageRefs = pages.map((page, index) => useRef(null));
+  const mainRef = useRef(null);
   const handleHover = (e) => {
     e.currentTarget.children[0].style.mixBlendMode = 'difference';
     e.currentTarget.children[1].style.height = '100%';
@@ -17,19 +20,13 @@ const Works = ({ setTitleCurrent }) => {
   }, []);
 
   return (
-    <main className="main main_work">
-      <div className="link_container" onMouseEnter={handleHover} onMouseLeave={handleLeave}>
-        <Link to="/netflix" className="link_container-link">Netflix</Link>
-        <div className='cube-hover'></div>
-      </div>
-      <div className="link_container" onMouseEnter={handleHover} onMouseLeave={handleLeave}>
-        <Link to="/punch" className="link_container-link">Punch</Link>
-        <div className='cube-hover'></div>
-      </div>
-      <div className="link_container" onMouseEnter={handleHover} onMouseLeave={handleLeave}>
-        <Link to="/centro" className="link_container-link">Centro</Link>
-        <div className='cube-hover'></div>
-      </div>
+    <main ref={mainRef} className="main main_work">
+      {pages.map((page, index) => (
+        <div className="link_container" key={index} ref={pageRefs[index]} onMouseEnter={handleHover} onMouseLeave={handleLeave}>
+          <Link to={`/${page}`} className="link_container-link">{page}</Link>
+          <div className='cube-hover'></div>
+        </div>
+      ))}
     </main>
   )
 }
