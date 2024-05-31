@@ -10,6 +10,7 @@
   justify-content: space-between;
   // font-family: sans-serif;
   mix-blend-mode: difference;
+  z-index: 10;
   &__title {
     padding: 0 1rem;
     @media screen and (min-width: 500px) {
