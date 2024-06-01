@@ -3,15 +3,14 @@
 .header {
   position: fixed;
   height: var.$header-height;
-  background-color: transparent;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  // font-family: sans-serif;
   mix-blend-mode: difference;
   z-index: 10;
   &__title {
+    font-weight: 400;
     padding: 0 1rem;
     @media screen and (min-width: 500px) {
       padding: 0 2rem;
