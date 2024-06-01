@@ -6,8 +6,7 @@ const punchTwo = [
     { id: 7, img: new URL("../../assets/img/punch/7.jpg", import.meta.url) },
     { id: 9, img: new URL("../../assets/img/punch/9.jpg", import.meta.url) },
     { id: 11, img: new URL("../../assets/img/punch/11.jpg", import.meta.url) },
-    { id: 13, img: new URL("../../assets/img/punch/13.jpg", import.meta.url) },
-    { id: 15, img: new URL("../../assets/img/punch/15.jpg", import.meta.url) }
+    // { id: 13, img: new URL("../../assets/img/punch/13.jpg", import.meta.url) }
   ],
   [
     { id: 2, img: new URL("../../assets/img/punch/2.jpg", import.meta.url) },
@@ -15,9 +14,7 @@ const punchTwo = [
     { id: 6, img: new URL("../../assets/img/punch/6.jpg", import.meta.url) },
     { id: 8, img: new URL("../../assets/img/punch/8.jpg", import.meta.url) },
     { id: 10, img: new URL("../../assets/img/punch/10.jpg", import.meta.url) },
-    { id: 12, img: new URL("../../assets/img/punch/12.jpg", import.meta.url) },
-    { id: 14, img: new URL("../../assets/img/punch/14.jpg", import.meta.url) },
-    { id: 16, img: new URL("../../assets/img/punch/16.jpg", import.meta.url) }  
+    { id: 12, img: new URL("../../assets/img/punch/12.jpg", import.meta.url) }
   ]
 ];
 

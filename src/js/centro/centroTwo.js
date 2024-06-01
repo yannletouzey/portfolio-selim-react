@@ -8,8 +8,8 @@ const centroTwo = [
     { id: 11, img: new URL("../../assets/img/centro/11.jpg", import.meta.url) },
     { id: 13, img: new URL("../../assets/img/centro/13.jpg", import.meta.url) },
     { id: 15, img: new URL("../../assets/img/centro/15.jpg", import.meta.url) },
-    { id: 17, img: new URL("../../assets/img/centro/17.jpg", import.meta.url) },
-    { id: 19, img: new URL("../../assets/img/centro/19.jpg", import.meta.url) }
+    // { id: 17, img: new URL("../../assets/img/centro/17.jpg", import.meta.url) },
+    // { id: 19, img: new URL("../../assets/img/centro/19.jpg", import.meta.url) }
   ],
   [
     { id: 2, img: new URL("../../assets/img/centro/2.jpg", import.meta.url) },
@@ -20,8 +20,7 @@ const centroTwo = [
     { id: 12, img: new URL("../../assets/img/centro/12.jpg", import.meta.url) },
     { id: 14, img: new URL("../../assets/img/centro/14.jpg", import.meta.url) },
     { id: 16, img: new URL("../../assets/img/centro/16.jpg", import.meta.url) },
-    { id: 18, img: new URL("../../assets/img/centro/18.jpg", import.meta.url) },
-    { id: 20, img: new URL("../../assets/img/centro/20.jpg", import.meta.url) }
+    // { id: 18, img: new URL("../../assets/img/centro/18.jpg", import.meta.url) }
   ]
 ];
 

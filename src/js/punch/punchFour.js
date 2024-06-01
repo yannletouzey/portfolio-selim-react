@@ -3,7 +3,7 @@ const punchFour = [
     { id: 1, img: new URL("../../assets/img/punch/1.jpg", import.meta.url) },
     { id: 5, img: new URL("../../assets/img/punch/5.jpg", import.meta.url) },
     { id: 9, img: new URL("../../assets/img/punch/9.jpg", import.meta.url) },
-    { id: 13, img: new URL("../../assets/img/punch/13.jpg", import.meta.url) }
+    // { id: 13, img: new URL("../../assets/img/punch/13.jpg", import.meta.url) }
   ], 
   [
     { id: 2, img: new URL("../../assets/img/punch/2.jpg", import.meta.url) },
