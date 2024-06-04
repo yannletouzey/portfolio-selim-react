@@ -6,9 +6,8 @@ import centroTwo from "../../js/centro/centroTwo.js";
 import centroThree from "../../js/centro/centroThree.js";
 import centroFour from "../../js/centro/centroFour.js";
 
-export default function Centro({ setTitleCurrent, resize, stateFocus, setStateFocus }) {
+export default function Centro({ setTitleCurrent, resize, stateFocus, setStateFocus, setStateMain }) {
 
-  const [stateMain, setStateMain] = useState("");
   const [targetToFocus, settargetToFocus] = useState(null);
 
   const handleClickOpenFocus = (e) => {
