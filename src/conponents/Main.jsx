@@ -24,8 +24,7 @@ const Main = ({ setTitleCurrent, resize, stateFocus, setStateFocus }) => {
 
   return (
     <main className={`main ${stateMain}`}>
-      {stateFocus === "focus_img-isOpened" && <div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: 10, opacity: 0.8, background: '#000'}}>
-      <button className="btn_close" onClick={handleClickCloseFocus}></button></div>}
+      {stateFocus === "focus_img-isOpened" && <><div style={{position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: 10, opacity: 0.8, background: '#000'}}></div><button className="btn_close" onClick={handleClickCloseFocus}></button></>}
       <Routes>
         <Route path="/" element={<Home setTitleCurrent={setTitleCurrent} resize={resize} stateFocus={stateFocus} setStateFocus={setStateFocus} setStateMain={setStateMain} />} />
         <Route path="/works" element={<Works setTitleCurrent={setTitleCurrent} stateFocus={stateFocus} setStateFocus={setStateFocus} setStateMain={setStateMain} />} />
