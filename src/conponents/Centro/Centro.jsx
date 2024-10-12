@@ -21,12 +21,12 @@ export default function Centro({ setTitleCurrent, resize, stateFocus, setStateFo
   }, []);
 
   return (
-    <main className={`main ${stateMain}`}>
+    <>
       <FocusImg stateFocus={stateFocus} resize={resize} setStateFocus={setStateFocus} img={targetToFocus} setStateMain={setStateMain}/>
       {resize > 0 && resize < 500 && <Template handleClickOpenFocus={handleClickOpenFocus} dataImg={centro} cl={"oneCol"} />}
       {resize >= 500 && resize < 700 && <Template handleClickOpenFocus={handleClickOpenFocus} dataImg={centroTwo} cl={"twoCol"}/>}
       {resize >= 700 && resize < 1000 && <Template handleClickOpenFocus={handleClickOpenFocus} dataImg={centroThree} cl={"threeCol"}/>}
       {resize >= 1000 && <Template handleClickOpenFocus={handleClickOpenFocus} dataImg={centroFour} cl={"fourCol"}/>}
-    </main>
-  );
+    </>
+  )
 };
